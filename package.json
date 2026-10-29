@@ -1,0 +1,17 @@
+{
+  "name": "scm-pages-demo",
+  "version": "1.0.0",
+  "description": "Static site auto-deployed to GitHub Pages with an ESLint quality gate",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint public",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "jest": "^29.7.0"
+  }
+}
