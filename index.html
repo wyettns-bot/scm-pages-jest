@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCM Pages Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Software Configuration Management Demo</h1>
+    <p class="subtitle">Static site deployed automatically with GitHub Actions + GitHub Pages</p>
+    <p id="greeting" class="greeting"></p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>What happens on every push</h2>
+      <ol class="pipeline">
+        <li><strong>Checkout</strong> &mdash; the workflow pulls the latest commit.</li>
+        <li><strong>Lint</strong> &mdash; ESLint checks every JS file (semicolons required).</li>
+        <li><strong>Test</strong> &mdash; Jest runs unit tests on the page-load greeting function.</li>
+        <li><strong>Package</strong> &mdash; the <code>public/</code> folder is bundled as a Pages artifact.</li>
+        <li><strong>Deploy</strong> &mdash; the artifact is published to GitHub Pages.</li>
+      </ol>
+      <p class="note">If linting or testing fails, packaging and deployment never run.</p>
+    </section>
+
+    <section class="card">
+      <h2>Try it</h2>
+      <p>Clicks this visit: <span id="count">0</span></p>
+      <button id="clickBtn" type="button">Click me</button>
+      <button id="themeBtn" type="button">Toggle theme</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Page loaded: <span id="loaded"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
