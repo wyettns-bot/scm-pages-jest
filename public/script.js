@@ -27,7 +27,7 @@ function getVisitorGreeting(date) {
   if (day === 0 || day === 6) {
     weekendNote = "Enjoy your weekend!";
   } else {
-    const daysLeft = 6 - day;
+    const daysLeft = 5 - day;
     weekendNote = daysLeft + (daysLeft === 1 ? " day" : " days") + " until the weekend.";
   }
 
